@@ -18,11 +18,11 @@ def make_tree (user_path, i):
         item = os.path.join(user_path, item)
         if os.path.isfile(item):
             if i == 1:
-                print("     |->"+os.path.basename(os.path.normpath(item)) + " is a file")
+                print("         |->"+os.path.basename(os.path.normpath(item)) + " is a file")
             elif i == 2 :
-                print ("        |---->"+os.path.basename(os.path.normpath(item))+ " is a file")
+                print ("            |->"+os.path.basename(os.path.normpath(item))+ " is a file")
             elif i > 2 :
-                print ("            |---->"+os.path.basename(os.path.normpath(item))+ " is a file")
+                print ("                |->"+os.path.basename(os.path.normpath(item))+ " is a file")
             else:
                 print("|->"+os.path.basename(os.path.normpath(item)) + " is a file")
         elif os.path.isdir(item):
