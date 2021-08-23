@@ -1,11 +1,16 @@
 import os
 
 
-def make_tree (user_tree):
-    os.system(user_tree)
+def make_tree (user_path):
+    for (root,dirs,files) in os.walk(user_path, topdown= True):
+        print (os.path.basename(os.path.normpath(root)))
+        print (dirs)
+        print (files)
+
+
+
 
 user_path = input ("Enter Path for Tree:" )
 
-user_tree = "tree" + " " + user_path
 
-make_tree(user_tree)
+make_tree(user_path)
